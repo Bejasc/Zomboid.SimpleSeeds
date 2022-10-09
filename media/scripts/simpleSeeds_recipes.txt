@@ -1,0 +1,20 @@
+module BejascSeeds {   
+    imports {
+        Base,
+        farming,
+    }
+
+    recipe Extract Seeds from Tomato
+    {
+        Tomato=1,
+        keep [Recipe.GetItemTypes.SharpKnife]/SharpedStone/MeatCleaver,
+
+        Category:Farming,
+        SkillRequired:Farming=2,
+
+        Time:100.0,
+        Result:TomatoSeed,
+        RemoveResultItem:True,
+        OnCreate: BejascSeeds_ReturnSeeds_Tomato
+    }
+}
